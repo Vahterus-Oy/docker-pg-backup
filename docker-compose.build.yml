@@ -1,6 +1,7 @@
 # Used solely for docker-compose build
 services:
   postgis-backup-prod:
+    platform: linux/amd64
     image: kartoza/pg-backup:$POSTGRES_MAJOR_VERSION-$POSTGIS_MAJOR_VERSION.${POSTGIS_MINOR_RELEASE}
     build:
       context: .

@@ -1,10 +1,6 @@
 #!/bin/bash
 
-
-#!/bin/bash
-
 source /backup-scripts/pgenv.sh
-POSTGRES_MAJOR_VERSION=$(cat /tmp/pg_version.txt)
 BIN_DIR="/usr/lib/postgresql/${POSTGRES_MAJOR_VERSION}/bin/"
 
 function s3_config() {
