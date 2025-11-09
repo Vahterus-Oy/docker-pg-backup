@@ -150,7 +150,7 @@ function cron_config() {
       # default value
 
       if [ -z "${CRON_SCHEDULE}" ]; then
-        export CRON_SCHEDULE='0 24 * * *'
+        export CRON_SCHEDULE='0 23 * * *'
       fi
       envsubst < /build_data/backups-cron > /backup-scripts/backups-cron
 
@@ -209,6 +209,7 @@ export POSTGRES_HOST=\"${POSTGRES_HOST}\"
 export DUMPPREFIX=\"${DUMPPREFIX}\"
 export ARCHIVE_FILENAME=\"${ARCHIVE_FILENAME}\"
 export REMOVE_BEFORE="${REMOVE_BEFORE}"
+export MIN_SAVED_FILE="${MIN_SAVED_FILE}"
 export RUN_ONCE="${RUN_ONCE}"
 DB_DUMP_ENCRYPTION_PASS_PHRASE=\"${DB_DUMP_ENCRYPTION_PASS_PHRASE}\"
 DB_DUMP_ENCRYPTION="${DB_DUMP_ENCRYPTION}"
